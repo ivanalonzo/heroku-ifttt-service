@@ -51,17 +51,6 @@ public class Main {
 		final String webappDirLocation = "src/main/webapp/";
 		root.setDescriptor(webappDirLocation + "/WEB-INF/web.xml");
 		root.setResourceBase(webappDirLocation);
-
-		// NCSARequestLog requestLog = new
-		// NCSARequestLog("/Users/ivanalonso/Desktop/jetty/jetty-yyyy_mm_dd.request.log");
-		// requestLog.setAppend(true);
-		// requestLog.setExtended(false);
-		// requestLog.setLogTimeZone("GMT");
-		// requestLog.setLogLatency(true);
-		// requestLog.setRetainDays(90);
-		//
-		// server.setRequestLog(requestLog);
-
 		server.setHandler(root);
 		server.start();
 		server.join();

@@ -21,7 +21,8 @@ public class Status extends BaseWS {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON + "; charset=UTF-8")
 	public Response doGet(@Context UriInfo params, @Context HttpHeaders reqHeaders) {
-		String apiKey = System.getProperty("key");
+//		String apiKey = System.getProperty("key");
+		String apiKey = "VMKOeiRtf8p2TltpJvVGeLASTAByW9vX_lggRE7W9EEEPLZKklC0RcSOJ4KR9AD5";
 		setServiceKey(apiKey);
 
 		log.debug(params.getPath());
