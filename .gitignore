@@ -1,0 +1,10 @@
+### Files
+.DS_Store
+.classpath
+.project
+
+### Folders
+/target/
+/bin/
+/logs/
+/.settings/
