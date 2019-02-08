@@ -23,8 +23,6 @@ public class Setup extends BaseWS {
 	@Path(name)
 	@Produces(MediaType.APPLICATION_JSON + "; charset=UTF-8")
 	public Response doPost(@Context UriInfo params, @Context HttpHeaders reqHeaders) {
-		String apiKey = System.getProperty("key");
-		setServiceKey(apiKey);
 
 		log.debug(params.getPath());
 		String msg = "Welcome to IFTTT Service. If you see this, the application is up and running";

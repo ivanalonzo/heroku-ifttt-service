@@ -12,14 +12,26 @@ import co.alonsos.java_utilities.rest.S_Response;
 
 public class BaseWS {
 	private static Logger log = Logger.getLogger(BaseWS.class);
-
+	private static String keyName = "iftttServiceKey";
 	protected S_Response res = new S_Response();
 	protected Gson gson = new Gson();
 	protected IO_Utils io = new IO_Utils();
-
 	private static String serviceKey;
 
-	protected void setServiceKey(String key) {
+	public BaseWS() {
+		//try to load the service key from either properties or env vars
+		if (System.getProperty(keyName) != null) {
+			setServiceKey(System.getProperty(keyName));
+		}else if (System.getenv(keyName) != null) {
+			setServiceKey(System.getenv(keyName));
+		}else {
+			log.error("No IFTTT service key was found in either a system property or environment variable");
+			log.error("Please setup the KV as iftttServiceKey=<ifttt service key value>");
+			System.exit(1);
+		}
+	}
+
+	private void setServiceKey(String key) {
 		if (serviceKey == null) {
 			serviceKey = key;
 		}
