@@ -25,6 +25,9 @@ public class Status extends BaseWS {
 		String apiKey = "VMKOeiRtf8p2TltpJvVGeLASTAByW9vX_lggRE7W9EEEPLZKklC0RcSOJ4KR9AD5";
 		setServiceKey(apiKey);
 
+		log.debug("Env Key" + System.getenv("key"));
+		log.debug("Sys Key" + System.getProperty("key"));
+
 		log.debug(params.getPath());
 		String msg = "Welcome to IFTTT Service. If you see this, the application is up and running";
 		if (validHeaderKey(reqHeaders, "Ifttt-Service-Key")) {
