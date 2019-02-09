@@ -5,9 +5,9 @@ import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MultivaluedMap;
 import org.apache.log4j.Logger;
 import com.google.gson.Gson;
+import co.alonsos.ifttt.obj.S_Response;
 import co.alonsos.java_utilities.io.IO_Utils;
 import co.alonsos.java_utilities.rest.ResponseConstants;
-import co.alonsos.java_utilities.rest.S_Response;
 
 
 public class BaseWS {
